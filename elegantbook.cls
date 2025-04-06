@@ -33,6 +33,7 @@
 \DeclareVoidOption{blue}{\ekv{color=blue}}
 \DeclareVoidOption{gray}{\ekv{color=gray}}
 \DeclareVoidOption{black}{\ekv{color=black}}
+\DeclareVoidOption{claret_violet}{\ekv{color=claret_violet}}
 \DeclareVoidOption{nocolor}{\ekv{color=none}}
 
 \DeclareVoidOption{chinese}{\ekv{scheme=chinese}}
@@ -311,6 +312,21 @@
   \definecolor{second}{RGB}{0,0,0}%
   \definecolor{third}{RGB}{0,0,0}%
 }{\relax}
+\ifdefstring{\ELEGANT@color}{claret_violet}{
+   % 主结构色 - 酒紫色
+   \definecolor{structurecolor}{RGB}{105,22,57}%
+  
+   % 主色 - 加入10%亮度提升确保可读性
+   \definecolor{main}{RGB}{118,35,69}%
+   
+   % 辅色 - 采用18世纪英国水彩画中的琥珀金
+   \definecolor{second}{RGB}{230,180,70}%
+   
+   % 强调色 - 维多利亚时期流行的孔雀石绿变体
+   \definecolor{third}{RGB}{70,160,150}%
+}{\relax}
+
+
 
 %green color
 \definecolor{structure1}{RGB}{0,120,2}%
@@ -337,6 +353,11 @@
 \definecolor{main5}{RGB}{0,0,0}%
 \definecolor{second5}{RGB}{0,0,0}%
 \definecolor{third5}{RGB}{0,0,0}%
+% claret_violet color
+\definecolor{structure6}{RGB}{105,22,57}%
+\definecolor{main6}{RGB}{105,22,57}%
+\definecolor{second6}{RGB}{105,22,57}%
+\definecolor{third6}{RGB}{105,22,57}%
 
 % corlor definition
 \definecolor{winered}{rgb}{0.5,0,0}
